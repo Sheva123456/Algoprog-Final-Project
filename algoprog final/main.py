@@ -33,87 +33,85 @@ Lose = False
 
 #loading images for animation
 #punch 1 
-is_punching =False
-punch1 = pygame.image.load('Animations/P_PUNCH_1/frame_0.gif')
-punch2 =pygame.image.load('Animations/P_PUNCH_1/frame_1.gif')
-punch3 =pygame.image.load('Animations/P_PUNCH_1/frame_2.gif')
-punch4 =pygame.image.load('Animations/P_PUNCH_1/frame_3.gif')
-punch5 =pygame.image.load('Animations/P_PUNCH_1/frame_4.gif')
+is_punching = False
+punch1 = pygame.image.load('algoprog final/Animations/P_PUNCH_1/frame_0.gif')
+punch2 = pygame.image.load('algoprog final/Animations/P_PUNCH_1/frame_1.gif')
+punch3 = pygame.image.load('algoprog final/Animations/P_PUNCH_1/frame_2.gif')
+punch4 = pygame.image.load('algoprog final/Animations/P_PUNCH_1/frame_3.gif')
+punch5 = pygame.image.load('algoprog final/Animations/P_PUNCH_1/frame_4.gif')
 
-#idle
-idle1 = pygame.image.load('Animations/P_IDLE/f0.gif')
-idle2 = pygame.image.load('Animations/P_IDLE/f1.gif')
-idle3 = pygame.image.load('Animations/P_IDLE/f2.gif')
-idle4 = pygame.image.load('Animations/P_IDLE/f3.gif')
-idle5 = pygame.image.load('Animations/P_IDLE/f4.gif')
-idle6 = pygame.image.load('Animations/P_IDLE/f5.gif')
-idle7 = pygame.image.load('Animations/P_IDLE/f6.gif')
-idle8 = pygame.image.load('Animations/P_IDLE/f7.gif')
-idle9 = pygame.image.load('Animations/P_IDLE/f8.gif')
+# idle
+idle1 = pygame.image.load('algoprog final/Animations/P_IDLE/f0.gif')
+idle2 = pygame.image.load('algoprog final/Animations/P_IDLE/f1.gif')
+idle3 = pygame.image.load('algoprog final/Animations/P_IDLE/f2.gif')
+idle4 = pygame.image.load('algoprog final/Animations/P_IDLE/f3.gif')
+idle5 = pygame.image.load('algoprog final/Animations/P_IDLE/f4.gif')
+idle6 = pygame.image.load('algoprog final/Animations/P_IDLE/f5.gif')
+idle7 = pygame.image.load('algoprog final/Animations/P_IDLE/f6.gif')
+idle8 = pygame.image.load('algoprog final/Animations/P_IDLE/f7.gif')
+idle9 = pygame.image.load('algoprog final/Animations/P_IDLE/f8.gif')
 
-#kick
-is_kicking=False
-kick1 = pygame.image.load('Animations/P_KICK/kick 0.gif')
-kick2 =pygame.image.load('Animations/P_KICK/kick 1.gif')
-kick3 =pygame.image.load('Animations/P_KICK/kick 2.gif')
-kick4 =pygame.image.load('Animations/P_KICK/kick 3.gif')
-kick5 =pygame.image.load('Animations/P_KICK/kick 4.gif')
-kick6 =pygame.image.load('Animations/P_KICK/kick 5.gif')
+# kick
+is_kicking = False
+kick1 = pygame.image.load('algoprog final/Animations/P_KICK/kick 0.gif')
+kick2 = pygame.image.load('algoprog final/Animations/P_KICK/kick 1.gif')
+kick3 = pygame.image.load('algoprog final/Animations/P_KICK/kick 2.gif')
+kick4 = pygame.image.load('algoprog final/Animations/P_KICK/kick 3.gif')
+kick5 = pygame.image.load('algoprog final/Animations/P_KICK/kick 4.gif')
+kick6 = pygame.image.load('algoprog final/Animations/P_KICK/kick 5.gif')
 
-#hit 
-player_hitted = False 
-p_hit1 = pygame.image.load('Animations/P-HIT/phit 1.gif')
-p_hit2 = pygame.image.load('Animations/P-HIT/phit 2.gif')
-p_hit3 = pygame.image.load('Animations/P-HIT/phit 3.gif')
-p_hit4 = pygame.image.load('Animations/P-HIT/phit 4.gif')
-#block 
-is_blocking = False 
-p_block1 = pygame.image.load('Animations/P_BLOCK/block 0.gif')
-p_block2 = pygame.image.load('Animations/P_BLOCK/block 1.gif')
-p_block3 = pygame.image.load('Animations/P_BLOCK/block 2.gif')
-p_block4 = pygame.image.load('Animations/P_BLOCK/block 3.gif')
+# hit
+player_hitted = False
+p_hit1 = pygame.image.load('algoprog final/Animations/P-HIT/phit 1.gif')
+p_hit2 = pygame.image.load('algoprog final/Animations/P-HIT/phit 2.gif')
+p_hit3 = pygame.image.load('algoprog final/Animations/P-HIT/phit 3.gif')
+p_hit4 = pygame.image.load('algoprog final/Animations/P-HIT/phit 4.gif')
 
-#e idle 
-e_idle1 = pygame.image.load('Animations/E-IDLE/idle 0.gif')
-e_idle2 = pygame.image.load('Animations/E-IDLE/idle 1.gif')
-e_idle3 = pygame.image.load('Animations/E-IDLE/idle 3.gif')
-e_idle4 = pygame.image.load('Animations/E-IDLE/idle 4.gif')
-e_idle5 = pygame.image.load('Animations/E-IDLE/idle 5.gif')
-e_idle6 = pygame.image.load('Animations/E-IDLE/idle 6.gif')
-e_idle7 = pygame.image.load('Animations/E-IDLE/idle 7.gif')
-e_idle8 = pygame.image.load('Animations/E-IDLE/idle 8.gif')
-e_idle9 = pygame.image.load('Animations/E-IDLE/idle 9.gif')
-e_idle10 = pygame.image.load('Animations/E-IDLE/idle 10.gif')
+# block
+is_blocking = False
+p_block1 = pygame.image.load('algoprog final/Animations/P_BLOCK/block 0.gif')
+p_block2 = pygame.image.load('algoprog final/Animations/P_BLOCK/block 1.gif')
+p_block3 = pygame.image.load('algoprog final/Animations/P_BLOCK/block 2.gif')
+p_block4 = pygame.image.load('algoprog final/Animations/P_BLOCK/block 3.gif')
 
+# e idle
+e_idle1 = pygame.image.load('algoprog final/Animations/E-IDLE/idle 0.gif')
+e_idle2 = pygame.image.load('algoprog final/Animations/E-IDLE/idle 1.gif')
+e_idle3 = pygame.image.load('algoprog final/Animations/E-IDLE/idle 3.gif')
+e_idle4 = pygame.image.load('algoprog final/Animations/E-IDLE/idle 4.gif')
+e_idle5 = pygame.image.load('algoprog final/Animations/E-IDLE/idle 5.gif')
+e_idle6 = pygame.image.load('algoprog final/Animations/E-IDLE/idle 6.gif')
+e_idle7 = pygame.image.load('algoprog final/Animations/E-IDLE/idle 7.gif')
+e_idle8 = pygame.image.load('algoprog final/Animations/E-IDLE/idle 8.gif')
+e_idle9 = pygame.image.load('algoprog final/Animations/E-IDLE/idle 9.gif')
+e_idle10 = pygame.image.load('algoprog final/Animations/E-IDLE/idle 10.gif')
 
-#e block 
-e_blocking = False 
-hold_block = False 
-e_block1 = pygame.image.load('Animations/E-BLOCK/eblock 0.gif')
-e_block2 = pygame.image.load('Animations/E-BLOCK/eblock 1.gif')
-e_block3 = pygame.image.load('Animations/E-BLOCK/eblock 2.gif')
-e_block4 = pygame.image.load('Animations/E-BLOCK/eblock 3.gif')
-e_block5 = pygame.image.load('Animations/E-BLOCK/eblock 4.gif')
+# e block
+e_blocking = False
+hold_block = False
+e_block1 = pygame.image.load('algoprog final/Animations/E-BLOCK/eblock 0.gif')
+e_block2 = pygame.image.load('algoprog final/Animations/E-BLOCK/eblock 1.gif')
+e_block3 = pygame.image.load('algoprog final/Animations/E-BLOCK/eblock 2.gif')
+e_block4 = pygame.image.load('algoprog final/Animations/E-BLOCK/eblock 3.gif')
+e_block5 = pygame.image.load('algoprog final/Animations/E-BLOCK/eblock 4.gif')
 
-e_block7 = pygame.image.load('Animations/E-BLOCK/eblock 6.gif')
+e_block7 = pygame.image.load('algoprog final/Animations/E-BLOCK/eblock 6.gif')
 
+# e hit
+enemy_hit = 0
+e_hit1 = pygame.image.load('algoprog final/Animations/E-HIT/ehit 1.gif')
+e_hit2 = pygame.image.load('algoprog final/Animations/E-HIT/ehit 2.gif')
+e_hit3 = pygame.image.load('algoprog final/Animations/E-HIT/ehit 3.gif')
+e_hit4 = pygame.image.load('algoprog final/Animations/E-HIT/ehit 4.gif')
 
-#e hit
-enemy_hit = 0 
-e_hit1 = pygame.image.load('Animations/E-HIT/ehit 1.gif')
-e_hit2 = pygame.image.load('Animations/E-HIT/ehit 2.gif')
-e_hit3 = pygame.image.load('Animations/E-HIT/ehit 3.gif')
-e_hit4 = pygame.image.load('Animations/E-HIT/ehit 4.gif')
-
-#e kick 
-e_kicking = False 
-e_kick1 =  pygame.image.load('Animations/E-KICK/ekick 0.gif')
-e_kick2 =  pygame.image.load('Animations/E-KICK/ekick 1.gif')
-e_kick3 =  pygame.image.load('Animations/E-KICK/ekick 2.gif')
-e_kick4 =  pygame.image.load('Animations/E-KICK/ekick 3.gif')
-e_kick5 =  pygame.image.load('Animations/E-KICK/ekick 4.gif')
-e_kick6 =  pygame.image.load('Animations/E-KICK/ekick 5.gif')
-
+# e kick
+e_kicking = False
+e_kick1 = pygame.image.load('algoprog final/Animations/E-KICK/ekick 0.gif')
+e_kick2 = pygame.image.load('algoprog final/Animations/E-KICK/ekick 1.gif')
+e_kick3 = pygame.image.load('algoprog final/Animations/E-KICK/ekick 2.gif')
+e_kick4 = pygame.image.load('algoprog final/Animations/E-KICK/ekick 3.gif')
+e_kick5 = pygame.image.load('algoprog final/Animations/E-KICK/ekick 4.gif')
+e_kick6 = pygame.image.load('algoprog final/Animations/E-KICK/ekick 5.gif')
 
 
 
@@ -129,7 +127,7 @@ player_block = [p_block1, p_block2, p_block3, p_block4]
 player_die = []
 
 for i in range (1, 26):
-    framep = pygame.image.load(f'Animations/P-DIE/die {i}.gif')
+    framep = pygame.image.load(f'algoprog final/Animations/P-DIE/die {i}.gif')
     player_die.append(framep)
 
 #===ENEMY ANIMATIONS ===
@@ -140,16 +138,16 @@ e_kick = [e_kick1,e_kick2,e_kick3,e_kick4,e_kick5,e_kick6]
 e_die = []
 
 for i in range(1, 18):  
-    frame = pygame.image.load(f'Animations/E-DIE/e_die{i}.gif')
+    frame = pygame.image.load(f'algoprog final/Animations/E-DIE/e_die{i}.gif')
     e_die.append(frame)
 
 
 
 #note images 
-note_Q = pygame.image.load('keyQ.png').convert_alpha()
-note_W = pygame.image.load('keyW.png').convert_alpha()
-note_A = pygame.image.load('keyA.png').convert_alpha()
-note_S= pygame.image.load('keyS.png').convert_alpha()
+note_Q = pygame.image.load('algoprog final/keyQ.png').convert_alpha()
+note_W = pygame.image.load('algoprog final/keyW.png').convert_alpha()
+note_A = pygame.image.load('algoprog final/keyA.png').convert_alpha()
+note_S= pygame.image.load('algoprog final/keyS.png').convert_alpha()
 note_Q= pygame.transform.scale(note_Q, NOTE_SIZE)
 note_W=pygame.transform.scale(note_W, NOTE_SIZE)
 note_A=pygame.transform.scale(note_A, NOTE_SIZE)
@@ -688,7 +686,7 @@ miss=[]
 
 
 running = True
-surface = pygame.image.load('Background.png')
+surface = pygame.image.load('algoprog final/Background.png')
 hold_start = {} 
 
 game_over_time = 0 
