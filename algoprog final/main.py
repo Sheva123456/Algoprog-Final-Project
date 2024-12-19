@@ -251,11 +251,7 @@ class LongNote(Note):
     def adjust_y_position(self):
         # Adjust Y position based on the key; call parent class method
         return super().adjust_y_position()
-    
-    def fade(self, amount):
-        # Fade out the long note by reducing length and adjusting X position
-        self.length -= amount + 40  # Determines how much the note fades away
-        self.x += amount + 5  # Adjust position to simulate fading
+
     
     def check_active(self, game_time):
         # Check if the long note is active based on the current game time
@@ -493,62 +489,6 @@ def EHit():
         current_frame_e_hit = 0
         enemy_hit = False
 
-def EKick():
-    global ek_animation_timer, current_frame_e_kick, e_kicking, is_blocking
-    animation_speed = 3  # Controls the speed of the animation
-
-    ek_animation_timer += 1  # Increment animation timer
-
-    if e_kicking and not e_blocking:
-        # If still kicking, increment the kick frame
-        if current_frame_e_kick < len(e_kick):  # Correct check for kicking animation
-            screen.blit(e_kick[current_frame_e_kick], (520, 120))  # Display the current frame of the kick
-
-            # Move to the next animation frame after waiting for the animation speed
-            if ek_animation_timer >= animation_speed:
-                current_frame_e_kick += 1
-                ek_animation_timer = 0  # Reset the timer after advancing the frame
-
-        # Once the kick animation finishes
-        if current_frame_e_kick >= len(e_kick):  # If the animation is done
-            current_frame_e_kick = 0  # Reset the kick frame counter
-            e_kicking = False  # Stop the kicking animation
-
-    else:
-        # If not kicking, reset the frame to the initial state
-        current_frame_e_hit = 0  # Reset hit frame (if used for other purposes)
-        current_frame_e_kick = 0  # Reset kick frame
-        e_kicking = False  # Stop any animation
-
-def EDie():
-    global current_frame_e_die, ed_animation_timer
-    
-    animation_speed = 3
-    ed_animation_timer += 1  # Increment animation timer
-
-    if Game_Over and Win:
-        text = font.render("Thanks for playing!", True, (255, 255, 255))
-        text_rect = text.get_rect(center=(600, 100))
-        screen.blit(text, text_rect)
-
-        # If still kicking, increment the kick frame
-        if current_frame_e_die < len(e_die):  # Correct check for kicking animation
-            screen.blit(e_die[current_frame_e_die], (520, 120))  # Display the current frame of the kick
-
-            # Move to the next animation frame after waiting for the animation speed
-            if ed_animation_timer >= animation_speed:
-                current_frame_e_die += 1
-                ed_animation_timer = 0  # Reset the timer after advancing the frame
-
-        # Once the kick animation finishes
-        if current_frame_e_die >= len(e_die):  # If the animation is done
-            current_frame_e_die = len(e_die) - 1 
-            screen.blit(e_die[current_frame_e_die], (520, 120))
-
-    else:
-        current_frame_e_die = 0  # Reset kick frame
-
-
 
 def EKick():
     global perfect, great, good, enemy_hit, current_frame_e_kick, e_blocking, e_hit, successful_hit, e_hp_x, e_kicking, ek_animation_timer, enemy_hit, e_blocking, current_frame_e_hit, e_animation_timer
@@ -780,10 +720,8 @@ while running:
         # Handle Game Over condition
         if Game_Over:
             if event.type == pygame.KEYDOWN:
-                if event.key != pygame.K_SPACE:
                     pass
-                else:
-                    Game_Over = False
+               
 
 #============ENEMY HIT PROBABILITY============#
 
