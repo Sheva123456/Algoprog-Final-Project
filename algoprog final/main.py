@@ -235,7 +235,6 @@ class LongNote(Note):
         super().__init__(key, spawn_time, speed, image, length = 0)
         self.x = 1200  # Starting X position of the long note
         self.length = (end_time - spawn_time) * speed*FPS  # Calculate length based on duration and speed
-        self.initial_length = self.length  # Store initial length for reference
         self.height = 20  # Set height for long notes
         self.end_time = end_time  # End time of the long note
         self.length = (end_time - spawn_time) * speed*FPS  # Recalculate length to match duration
@@ -244,9 +243,8 @@ class LongNote(Note):
         self.required_hits = int((end_time - spawn_time) * 5)  # Required hits for scoring
         
     def move(self):
-        # Move the note leftward and update the length to reflect its fading over time
         super().move()  # Call the move method from the parent class (Note)
-        self.length = max(0, min(self.length + self.speed, self.initial_length))  # Update length
+       
     
     def adjust_y_position(self):
         # Adjust Y position based on the key; call parent class method
