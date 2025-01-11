@@ -1,11 +1,12 @@
 import pygame , time , random
 from sys import exit 
-from random import randint 
-import random 
 
 pygame.init()
 screen = pygame.display.set_mode((1200,550))
 
+pygame.display.set_caption("Friday Night Fightin'")
+pygame.mixer.init() 
+sound = pygame.mixer.Sound('algoprog final/song.mp3') 
 pygame.display.set_caption("Friday Night Fightin'")
 
 font = pygame.font.Font(None, 50)
@@ -303,9 +304,11 @@ current_frame_p_die = 0
 p_animation_timer = 0
 def PPunch ():
     
-    global  animation_timer, screen, is_punching, current_frame_punch, is_kicking, player_hitted
+    global  animation_timer, screen, is_punching, current_frame_punch, is_kicking, player_hitted, note_bar 
+    
     if is_punching and not is_kicking and not player_hitted:
         animation_timer += 1 
+        note_bar =pygame.draw.line(screen, (200, 220, 220), (200, 361), (200, 550), 92) 
         if current_frame_punch < len(player_punch1):
                         screen.blit( player_punch1[current_frame_punch], (450,120))
                         
@@ -317,9 +320,11 @@ def PPunch ():
         current_frame_punch = 0
         is_punching = False
 def PKick ():
-    global animation_timer, screen, is_kicking, current_frame_kick ,is_punching, player_hitted
+    global animation_timer, screen, is_kicking, current_frame_kick ,is_punching, player_hitted, note_bar
+    
     if is_kicking and not is_punching and not  player_hitted:
         animation_timer += 1
+        note_bar =pygame.draw.line(screen, (200, 220, 220), (200, 361), (200, 550), 92) 
         if current_frame_kick < len(player_kick):
             screen.blit( player_kick[current_frame_kick], (450,120)) 
             
@@ -331,9 +336,10 @@ def PKick ():
         current_frame_kick = 0
         is_kicking = False
 def PIdle ():
-    global current_frame_idle, animation_timer, screen, is_punching, is_kicking, Lose 
+    global current_frame_idle, animation_timer, screen, is_punching, is_kicking, Lose
     animation_speed = 4 
     if not is_punching and not is_kicking and not player_hitted and not is_blocking and not Lose :
+        
         animation_timer += 1 
         if current_frame_idle < len(player_idle):
                         screen.blit( player_idle[current_frame_idle], (450,120))
@@ -365,9 +371,10 @@ def PHit():
             
 
 def PBlock():
-    global   current_frame_block, is_blocking,animation_timer ,player_hitted, hold_block
+    global   current_frame_block, is_blocking,animation_timer ,player_hitted, hold_block, note_bar
     animation_speed = 4
     if is_blocking and not is_kicking and not is_punching and not player_hitted: 
+        note_bar =pygame.draw.line(screen, (200, 220, 220), (200, 361), (200, 550), 92) 
         player_hitted = False # If a miss has occurred
         animation_timer += 1
         if current_frame_block < len(player_block):
@@ -489,7 +496,7 @@ def EHit():
 
 
 def EKick():
-    global perfect, great, good, enemy_hit, current_frame_e_kick, e_blocking, e_hit, successful_hit, e_hp_x, e_kicking, ek_animation_timer, enemy_hit, e_blocking, current_frame_e_hit, e_animation_timer
+    global perfect, great, good, enemy_hit, current_frame_e_kick, e_blocking, e_hit, e_hp_x, e_kicking, ek_animation_timer, enemy_hit, e_blocking, current_frame_e_hit, e_animation_timer
     animation_speed = 3  # Controls the speed of the animation
 
     ek_animation_timer += 1  # Increment animation timer
@@ -633,9 +640,11 @@ while running:
 
     if not Game_Over:
         game_time = time.time() - gst  # Update game time only when the game is running
+        sound.play()
     else:   
         removed = []  # If game over, remove all notes
         notes = []
+        sound.stop()
 
     # Event handling
     for event in pygame.event.get():
@@ -789,7 +798,7 @@ while running:
         if not Game_Over:
             game_over_time = time.time() - gst  # Capture the time at the game over moment
             Game_Over = True
-            Win = True 
+            Lose = True 
         
     #====================================#
 
